@@ -408,4 +408,13 @@ document.addEventListener('DOMContentLoaded',function(){
   const depths={25:false,50:false,75:false,100:false};
   window.addEventListener('scroll',()=>{const pct=(window.scrollY+window.innerHeight)/document.documentElement.scrollHeight*100;Object.keys(depths).forEach(d=>{if(!depths[d]&&pct>=d){depths[d]=true;track('Scroll Depth',{percent:d+'%'})}})});
   [30,60,120].forEach(sec=>setTimeout(()=>track('Time on Page',{seconds:sec}),sec*1000));
-  const obs2=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isI
+  const obs2=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){track('Section View',{section:e.target.id})}})},{threshold:.3});
+  document.querySelectorAll('section[id]').forEach(s=>obs2.observe(s));
+});
+</script>
+<script>
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
