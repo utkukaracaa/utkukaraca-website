@@ -4,6 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
+<meta name="description" content="Utku Karaca — Product Manager with 3+ years building AI-powered mobile products. $200K+ MRR, 30+ apps shipped. Open to full-time roles and fractional PM work.">
+<meta name="keywords" content="Utku Karaca, Product Manager, AI Products, Mobile Apps, Istanbul, Fractional PM">
+<meta name="author" content="Utku Karaca">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.utkukaraca.co">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Utku Karaca — Product Manager">
+<meta property="og:description" content="3+ years building AI-powered mobile products. $200K+ MRR, 30+ apps shipped.">
+<meta property="og:url" content="https://www.utkukaraca.co">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Utku Karaca — Product Manager">
+<meta name="twitter:description" content="3+ years building AI-powered mobile products. $200K+ MRR, 30+ apps shipped.">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Utku Karaca",
+  "url": "https://www.utkukaraca.co",
+  "jobTitle": "Product Manager",
+  "description": "Product Manager with 3+ years of experience building AI-powered mobile and web products.",
+  "email": "utkukaracaaa@gmail.com",
+  "telephone": "+905342240105",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Istanbul",
+    "addressCountry": "TR"
+  },
+  "sameAs": [
+    "https://linkedin.com/in/utkukaracaa"
+  ],
+  "knowsAbout": ["Product Management", "AI Products", "Mobile Apps", "Subscription Monetization", "A/B Testing"]
+}
+</script>
 <title>Utku Karaca — Product Manager</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
@@ -408,4 +448,9 @@ document.addEventListener('DOMContentLoaded',function(){
   const depths={25:false,50:false,75:false,100:false};
   window.addEventListener('scroll',()=>{const pct=(window.scrollY+window.innerHeight)/document.documentElement.scrollHeight*100;Object.keys(depths).forEach(d=>{if(!depths[d]&&pct>=d){depths[d]=true;track('Scroll Depth',{percent:d+'%'})}})});
   [30,60,120].forEach(sec=>setTimeout(()=>track('Time on Page',{seconds:sec}),sec*1000));
-  const obs2=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isI
+  const obs2=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){track('Section View',{section:e.target.id});obs2.unobserve(e.target)}})},{threshold:.3});
+  document.querySelectorAll('section[id]').forEach(s=>obs2.observe(s));
+});
+</script>
+</body>
+</html>
